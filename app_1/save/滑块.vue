@@ -10,6 +10,14 @@
 		kkk
 	</swiper-item>
 </swiper>
+<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000">
+	<swiper-item>
+		<view class="swiper-item"></view>
+	</swiper-item>
+	<swiper-item>
+		<view class="swiper-item"></view>
+	</swiper-item>
+</swiper>
 </template>
 
 <script setup lang="ts" >

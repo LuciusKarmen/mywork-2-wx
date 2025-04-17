@@ -1,7 +1,16 @@
 <template>
- <view class="a">hhh
- <view class="b">666</view></view>
- 
+<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" vertical>
+	<swiper-item>
+		<view class="b">111</view>
+	</swiper-item>
+	<swiper-item>
+		<view class="b">222</view>
+	</swiper-item>
+	<swiper-item>
+		<view class="b">333</view>
+	</swiper-item>
+</swiper>
+
 </template>
 
 <script setup lang="ts" >
