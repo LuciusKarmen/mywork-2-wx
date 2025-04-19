@@ -1,0 +1,1 @@
+{"version":3,"file":"111.js","sources":["D:/360Downloads/HBuilderX.4.57.2025032507/HBuilderX/plugins/uniapp-cli-vite/uniPage:/cGFnZXMvMTExLzExMS52dWU"],"sourcesContent":["import MiniProgramPage from 'C:/Users/HP/Desktop/移动开发/mywork2/app_1/pages/111/111.vue'\nwx.createPage(MiniProgramPage)"],"names":[],"mappings":";;;;;;;AACA,GAAG,WAAW,eAAe;"}
