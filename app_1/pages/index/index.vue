@@ -9,10 +9,12 @@
 </script>
 
 <style>
+	@import "../../common/css/public.css"
 .box{
 	width: 375rpx;
-	height:100px;
+	height:100vh;
 	background-color: aqua;
 	
 }
+
 </style>
