@@ -3,5 +3,24 @@
   "projectname": "app_1",
   "setting": {
     "compileHotReLoad": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/other/other",
+          "pathName": "pages/other/other",
+          "query": "",
+          "launchMode": "default",
+          "scene": null,
+          "partialCompile": {
+            "enabled": false,
+            "pages": [
+              "pages/other/other"
+            ]
+          }
+        }
+      ]
+    }
   }
 }

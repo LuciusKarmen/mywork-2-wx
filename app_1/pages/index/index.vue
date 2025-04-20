@@ -8,13 +8,16 @@
 
 </script>
 
-<style>
-	@import "../../common/css/public.css"
-.box{
-	width: 375rpx;
-	height:100vh;
-	background-color: aqua;
+<style lang="scss">
 	
-}
+	.box{
+		width: 375rpx;
+		height:100vh;
+		color:$uni-color-001;
+
+	}
+
+	/* import语句一定要以分号结尾 */
+
 
 </style>
