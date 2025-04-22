@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "猫猫相册",
+  "navigationBarBackgroundColor": "#ffaaff",
+  "enablePullDownRefresh": true,
+  "usingComponents": {}
+}

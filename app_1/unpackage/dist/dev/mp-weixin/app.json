@@ -2,7 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/other/other",
-    "pages/front/front"
+    "pages/my/my",
+    "pages/cat/cat",
+    "pages/class/class"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -13,7 +15,7 @@
   },
   "tabBar": {
     "color": "#007aff",
-    "selectedColor": "#00ff7f",
+    "selectedColor": "#ff0000",
     "position": "top",
     "list": [
       {
@@ -23,16 +25,28 @@
         "selectedIconPath": "/static/首页-置灰.png"
       },
       {
+        "pagePath": "pages/class/class",
+        "text": "分类",
+        "iconPath": "/static/分享.png",
+        "selectedIconPath": "/static/分享.png"
+      },
+      {
+        "pagePath": "pages/cat/cat",
+        "text": "猫猫",
+        "iconPath": "/static/书桌.png",
+        "selectedIconPath": "/static/书桌.png"
+      },
+      {
         "pagePath": "pages/other/other",
         "text": "论坛",
         "iconPath": "/static/分享.png",
         "selectedIconPath": "/static/分享.png"
       },
       {
-        "pagePath": "pages/front/front",
-        "text": "学习",
-        "iconPath": "/static/书桌.png",
-        "selectedIconPath": "/static/书桌.png"
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/static/分享.png",
+        "selectedIconPath": "/static/分享.png"
       }
     ]
   },
