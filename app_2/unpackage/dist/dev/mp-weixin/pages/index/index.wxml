@@ -1,0 +1,1 @@
+<view bindtap="{{a}}">跳转到我的</view>

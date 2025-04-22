@@ -5,6 +5,13 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
+		},
+		{
+			"path" : "pages/my/my",
+			"style" : 
+			{
+				"navigationBarTitleText" : "我的"
+			}
 		}
 	],
 	"globalStyle": {
@@ -12,6 +19,21 @@
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "/static/logo.png",
+				"text": "主测试"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"iconPath": "/static/success.png",
+				"text": "副测试"
+				
+			}
+		]
 	},
 	"uniIdRouter": {}
 }

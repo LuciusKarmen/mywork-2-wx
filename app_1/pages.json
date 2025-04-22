@@ -4,14 +4,15 @@
 			"path": "pages/index/index",
 			"style": {
 				// 设置标题
-				"navigationBarTitleText": "星辰网"
+				"navigationBarTitleText": "星辰壁纸",
+				"navigationBarBackgroundColor": "#fff706"
 			}
 		},
 		{
 			"path" : "pages/other/other",
 			"style" : 
 			{
-				"navigationBarTitleText" : "湖科大暗网论坛",
+				"navigationBarTitleText" : "暗网论坛",
 				"navigationBarBackgroundColor": "#00ff40"
 			}
 		},
@@ -19,7 +20,8 @@
 			"path" : "pages/front/front",
 			"style" : 
 			{
-				"navigationBarTitleText" : "加号"
+				"navigationBarTitleText" : "商品",
+				"navigationBarBackgroundColor": "#03eaff"
 			}
 		}
 		
@@ -43,17 +45,17 @@
 				"selectedIconPath": "/static/首页-置灰.png"
 			},
 			{
+				"pagePath": "pages/front/front",
+				"text": "商品",
+				"iconPath": "/static/书桌.png",
+				"selectedIconPath": "/static/书桌.png"
+			},
+			{
 				"pagePath": "pages/other/other",
 				"text": "论坛",
 				"iconPath": "/static/分享.png",
 				"selectedIconPath": "/static/分享.png"
 			},
-			{
-				"pagePath": "pages/front/front",
-				"text": "学习",
-				"iconPath": "/static/书桌.png",
-				"selectedIconPath": "/static/书桌.png"
-			}
 			
 		]
 	},

@@ -1,52 +1,23 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
-		</view>
-	</view>
+	<view @click="to">跳转到我的</view>
+	
 </template>
 
-<script>
-	export default {
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
-
-		},
-		methods: {
-
-		}
+<script lang="ts" setup>
+	uni.setStorageSync('1',2)
+	uni.setStorageSync('name',['张三','李四'])
+	function to(){
+		uni.navigateTo({
+			url:'/pages/my/my'
+		})
 	}
+	const b=uni.getStorageSync('1');
+	const a=uni.getStorageSync('name');
+	console.log(a[1])
+	
 </script>
 
-<style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
+<style scoped>
+	
+	
 </style>
