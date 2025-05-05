@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/other/other",
     "pages/my/my",
     "pages/cat/cat",
     "pages/class/class"
@@ -15,38 +14,31 @@
   },
   "tabBar": {
     "color": "#007aff",
-    "selectedColor": "#ff0000",
-    "position": "top",
+    "selectedColor": "#00aaff",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "/static/首页-置灰.png",
-        "selectedIconPath": "/static/首页-置灰.png"
+        "iconPath": "/static/home-h.png",
+        "selectedIconPath": "/static/home.png"
       },
       {
         "pagePath": "pages/class/class",
         "text": "分类",
-        "iconPath": "/static/分享.png",
-        "selectedIconPath": "/static/分享.png"
+        "iconPath": "/static/classify-h.png",
+        "selectedIconPath": "/static/classify.png"
       },
       {
         "pagePath": "pages/cat/cat",
         "text": "猫猫",
-        "iconPath": "/static/书桌.png",
-        "selectedIconPath": "/static/书桌.png"
-      },
-      {
-        "pagePath": "pages/other/other",
-        "text": "论坛",
-        "iconPath": "/static/分享.png",
-        "selectedIconPath": "/static/分享.png"
+        "iconPath": "/static/我的猫友1.png",
+        "selectedIconPath": "/static/我的猫友1 (1).png"
       },
       {
         "pagePath": "pages/my/my",
         "text": "我的",
-        "iconPath": "/static/分享.png",
-        "selectedIconPath": "/static/分享.png"
+        "iconPath": "/static/user-h.png",
+        "selectedIconPath": "/static/user.png"
       }
     ]
   },

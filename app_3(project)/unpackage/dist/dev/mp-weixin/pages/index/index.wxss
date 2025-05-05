@@ -23,8 +23,11 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.container.data-v-1cf27b2a {
+  margin-botton: 60rpx;
+}
 .container .layout.data-v-1cf27b2a {
-  padding: 50rpx;
+  padding: 30rpx;
 }
 .container .layout .box.data-v-1cf27b2a {
   margin-botton: 60rpx;
@@ -37,4 +40,20 @@
 }
 .container .layout .box .text.data-v-1cf27b2a {
   padding: 40rpx;
+}
+.container .xxx.data-v-1cf27b2a {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+}
+.container .xxx .aaa.data-v-1cf27b2a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  background-color: gainsboro;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  border: 2px soild black;
 }

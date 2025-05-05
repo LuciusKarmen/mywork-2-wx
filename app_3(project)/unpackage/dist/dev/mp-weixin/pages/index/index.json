@@ -1,4 +1,5 @@
 {
-  "navigationBarTitleText": "uni-app",
+  "navigationBarTitleText": "猫猫相册",
+  "enablePullDownRefresh": true,
   "usingComponents": {}
 }

@@ -30,12 +30,12 @@
   padding: 30rpx;
 }
 .container .layout .box.data-v-c87512b1 {
-  margin-botton: 60rpx;
+  margin-bottom: 60rpx;
   box-shadow: 0 10rpx 30rpx rgba(0, 0, 0, 0.08);
   border-radius: 15px;
   border: 2px solid black;
 }
-.container .layout .box .pic img.data-v-c87512b1 {
+.container .layout .box .pic image.data-v-c87512b1 {
   width: 100%;
 }
 .container .layout .box .text.data-v-c87512b1 {

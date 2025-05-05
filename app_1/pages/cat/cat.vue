@@ -77,12 +77,12 @@ resquest();
 	.layout{
 		padding: 30rpx; 
 		.box{
-			margin-botton:60rpx;
+			margin-bottom:60rpx;
 			box-shadow:0 10rpx 30rpx rgba(0,0,0,0.08);
 			border-radius: 15px;
 			border: 2px solid black;
 			.pic{
-				img{
+				image{
 					width:100%;
 				}
 			}

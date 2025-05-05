@@ -1,1 +1,1 @@
-<view></view>
+<view class="uesrLayout"><view class="user"><view class="box"><view class="pic"><image src="{{a}}" class="pppp" alt=""></image></view><view class="word">karmen-luious</view></view></view><view class="session"></view><view class="session"></view></view>
