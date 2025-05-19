@@ -1,6 +1,8 @@
 <template>
 	<!-- <button>启动</button> -->
 	<view class='container'>
+		<view class='tt'></view>
+		<view class="nk">猫猫相册</view>
 		<view class='layout'>
 			<view class='box' v-for='(item,index) in pets'  :key='item.id'>
 			<view class='pic'>
@@ -73,9 +75,30 @@ resquest();
 
 <style lang='scss' scoped>
 .container{
+	
 	background-color: pink;
 	margin-botton:60rpx;
+	.tt{
+		background-color:yellow;
+		width: 100%;
+		height:50px;
+		position:fixed;
+		top:0;
+		left:0;
+	}
+	.nk{
+		position:fixed;
+		top:50px;
+		left:0;
+		width: 100%;
+		font-size: 20px;
+		padding: 3px;
+		background-color:yellow;
+		display: flex;
+		justify-content: center;
+	}
 	.layout{
+		margin-top: 50px;
 		padding: 30rpx; 
 		.box{
 			margin-bottom:60rpx;

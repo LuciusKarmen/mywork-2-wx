@@ -20,9 +20,10 @@
 			"path" : "pages/cat/cat",
 			"style" : 
 			{
-				"navigationBarTitleText": "猫猫相册",
-				"navigationBarBackgroundColor": "#ffaaff",
-				"enablePullDownRefresh":true
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView":false
+				}
 			}
 		},
 		{

@@ -1,6 +1,7 @@
 <template>
 	<view class="classout pageB">
-		<view>hhh</view>
+		
+		<title></title>
 		<view class='classify'>
 			<theme-item v-for='item in 15'></theme-item>
 		</view>

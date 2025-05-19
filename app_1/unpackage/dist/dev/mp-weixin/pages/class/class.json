@@ -2,6 +2,7 @@
   "navigationBarTitleText": "class",
   "navigationBarBackgroundColor": "#ffaa00",
   "usingComponents": {
+    "title": "../../components/title/title",
     "theme-item": "../../components/theme-item/theme-item"
   }
 }

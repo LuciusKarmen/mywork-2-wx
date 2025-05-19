@@ -1,0 +1,1 @@
+<view class="title"><view class="text">搜索</view><view class="li"><uni-icons wx:if="{{a}}" u-i="736827fe-0" bind:__l="__l" u-p="{{a}}"></uni-icons><text class="t">天上天下尽在掌中</text></view></view>

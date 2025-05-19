@@ -4,7 +4,8 @@
     "pages/my/my",
     "pages/cat/cat",
     "pages/class/class",
-    "pages/preview/preview"
+    "pages/preview/preview",
+    "pages/classlist/classlist"
   ],
   "window": {
     "navigationBarTextStyle": "black",
