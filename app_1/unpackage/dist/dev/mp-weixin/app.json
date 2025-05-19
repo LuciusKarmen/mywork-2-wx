@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/my/my",
     "pages/cat/cat",
-    "pages/class/class"
+    "pages/class/class",
+    "pages/preview/preview"
   ],
   "window": {
     "navigationBarTextStyle": "black",

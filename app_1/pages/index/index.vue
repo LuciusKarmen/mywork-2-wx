@@ -1,5 +1,5 @@
 <template>
-		<view class='home'>
+		<view class='home pageB'>
 			<view class="banner">
 				<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" circular="true">
 					<swiper-item>
@@ -22,7 +22,7 @@
 					<view>
 					     <swiper-item>欢迎来到星辰网络！</swiper-item>
 					     <swiper-item>无论你是谁，先祝你天天开心！</swiper-item>
-					     <swiper-item>作者：karmen-luious(许光明)</swiper-item>
+					     <swiper-item>作者：Lucius.Karmen(许光明)</swiper-item>
 					</view>
 				</swiper>
 				<view>
@@ -59,9 +59,8 @@
 					</template>
 				</common-title>
 				<view class="bbb">
-					<view class='box' v-for='item in 8'>
-						<theme-item></theme-item>
-					</view>
+					<theme-item class='box' v-for='item in 8'></theme-item>
+					<theme-item :isMore='true'></theme-item>
 				</view>
 			</view>
 		

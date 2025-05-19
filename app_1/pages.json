@@ -32,6 +32,20 @@
 				"navigationBarTitleText" : "class",
 				"navigationBarBackgroundColor": "#ffaa00"
 			}
+		},
+		{
+			"path" : "pages/preview/preview",
+			"style" : 
+			{
+				"navigationBarTitleText" : "预览"
+			}
+		},
+		{
+			"path" : "pages/classlist/classlist",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
 		}
 		
 	],

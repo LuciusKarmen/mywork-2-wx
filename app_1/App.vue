@@ -13,7 +13,7 @@
 </script>
 
 <style lang='scss'>
-	/*每个页面公共css */
-	@import "common/css/public.css"
+	/*每个页面公共css ，不需要导入*/
+	@import "common/css/public.scss"
 	
 </style>

@@ -23,7 +23,11 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-/*每个页面公共css */
-view,swiper,swiper-item{
-    box-sizing: border-box;
+/*每个页面公共css ，不需要导入*/
+view, swiper, swiper-item {
+  box-sizing: border-box;
+}
+.pageB {
+  background-image: linear-gradient(to bottom, transparent, #ffffff 600rpx), linear-gradient(to right, #A5E1C0, #ffcccc);
+  min-height: 90vh;
 }page{--status-bar-height:25px;--top-window-height:0px;--window-top:0px;--window-bottom:0px;--window-left:0px;--window-right:0px;--window-magin:0px}[data-c-h="true"]{display: none !important;}

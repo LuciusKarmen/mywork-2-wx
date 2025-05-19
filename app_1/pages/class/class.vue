@@ -1,6 +1,9 @@
 <template>
-	<view>
-		哈哈哈哈哈哈哈哈哈
+	<view class="classout pageB">
+		<view>hhh</view>
+		<view class='classify'>
+			<theme-item v-for='item in 15'></theme-item>
+		</view>
 	</view>
 </template>
 
@@ -9,5 +12,11 @@
 </script>
 
 <style>
+	.classify{
+		display: grid;
+		grid-template-columns: repeat(3,1fr);
+		padding:30rpx;
+		
+	}
 	       
 </style>

@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "class",
   "navigationBarBackgroundColor": "#ffaa00",
-  "usingComponents": {}
+  "usingComponents": {
+    "theme-item": "../../components/theme-item/theme-item"
+  }
 }

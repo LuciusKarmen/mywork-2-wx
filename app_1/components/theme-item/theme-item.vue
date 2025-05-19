@@ -1,15 +1,25 @@
 <template>
 	<view class="theme">
-		<navigator url="" class='box'>
+		<navigator url="/pages/my/my" class='box' v-if='!isMore'>
 			<img src="../../static/preview_small.webp" alt="" mode="aspectFill" class='pic'>
 			<view class="mask"> hhh</view>
 			<view class='token'>666</view>
+		</navigator>
+		<navigator url="/pages/class/class" class='box a' v-if='isMore'>
+			<img src="../../static/preview_small.webp" alt="" mode="aspectFill" class='pic'>
+			<view class="mask">更多</view>
+			
 		</navigator>
 	</view>
 </template>
 
 <script lang="ts" setup>
-	
+defineProps({
+	isMore:{
+		type:Boolean,
+		default:false
+	}
+})
 	
 </script>
 
@@ -19,6 +29,7 @@
 	.box{
 		height:210px;
 		position: relative;
+		overflow: hidden;
 
 		
 		.pic{
@@ -57,6 +68,18 @@
 			padding:6rpx 10rpx;
 			//单边圆角
 			border-radius: 0 0 20rpx 0;
+		}
+		
+	}
+	.box.a{
+		height:210px;
+		position: relative;
+		.mask{
+			width:100%;
+			height: 100%;
+			backdrop-filter: blur(20rpx);
+			font-size: 25px;
+
 		}
 	}
 	

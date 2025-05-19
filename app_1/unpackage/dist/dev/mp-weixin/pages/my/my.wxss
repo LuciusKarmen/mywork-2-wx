@@ -26,7 +26,13 @@
 .uesrLayout .user {
   display: flex;
   justify-content: center;
-  margin-top: 80px;
+}
+.uesrLayout .user .box {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .uesrLayout .user .box .pic {
   display: flex;
@@ -40,4 +46,32 @@
 .uesrLayout .user .box .word {
   margin-top: 10px;
   font-size: 30px;
+}
+.uesrLayout .user .box .address {
+  margin-top: 10px;
+  font-size: 20px;
+  color: gainsboro;
+}
+.uesrLayout .session {
+  width: 690rpx;
+  margin: 50px auto;
+  background-color: gainsboro;
+  border: 1px solid #eee;
+  box-shadow: 0 0 30rpx rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+.uesrLayout .session .row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  height: 100rpx;
+  border-bottom: 1px solid #eee;
+}
+.uesrLayout .session .row .left {
+  display: flex;
+  align-items: center;
+}
+.uesrLayout .session .row .right {
+  display: flex;
+  align-items: center;
 }

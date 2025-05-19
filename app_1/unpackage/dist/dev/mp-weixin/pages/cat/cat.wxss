@@ -24,6 +24,7 @@
 /* 透明度 */
 /* 文章场景相关 */
 .container.data-v-c87512b1 {
+  background-color: pink;
   margin-botton: 60rpx;
 }
 .container .layout.data-v-c87512b1 {
@@ -37,9 +38,10 @@
 }
 .container .layout .box .pic image.data-v-c87512b1 {
   width: 100%;
+  border-radius: 15px;
 }
 .container .layout .box .text.data-v-c87512b1 {
-  padding: 40rpx;
+  padding: 20rpx;
 }
 .container .xxx.data-v-c87512b1 {
   position: fixed;
@@ -50,7 +52,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  height: 40px;
   width: 50px;
   background-color: gainsboro;
   margin-bottom: 40px;

@@ -73,6 +73,7 @@ resquest();
 
 <style lang='scss' scoped>
 .container{
+	background-color: pink;
 	margin-botton:60rpx;
 	.layout{
 		padding: 30rpx; 
@@ -84,10 +85,11 @@ resquest();
 			.pic{
 				image{
 					width:100%;
+					border-radius: 15px;
 				}
 			}
 			.text{
-				padding:40rpx;
+				padding:20rpx;
 			}
 		}
 	}
@@ -99,7 +101,7 @@ resquest();
 			display: flex;
 			align-items: center;
 			justify-content:center ;
-			height:50px;
+			height:40px;
 			width: 50px;
 			background-color: gainsboro;
 			margin-bottom: 40px;
