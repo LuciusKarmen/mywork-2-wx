@@ -5,7 +5,8 @@
     "pages/cat/cat",
     "pages/class/class",
     "pages/preview/preview",
-    "pages/classlist/classlist"
+    "pages/classlist/classlist",
+    "pages/our/our"
   ],
   "window": {
     "navigationBarTextStyle": "black",

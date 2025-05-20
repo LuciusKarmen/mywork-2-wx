@@ -1,0 +1,1 @@
+{"version":3,"file":"our.js","sources":["D:/360Downloads/HBuilderX.4.57.2025032507/HBuilderX/plugins/uniapp-cli-vite/uniPage:/cGFnZXMvb3VyL291ci52dWU"],"sourcesContent":["import MiniProgramPage from 'C:/Users/HP/Desktop/仓库2（移动开发）/mywork2/app_1/pages/our/our.vue'\nwx.createPage(MiniProgramPage)"],"names":[],"mappings":";;;;;;;;;;;;AACA,GAAG,WAAW,eAAe;"}

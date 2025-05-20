@@ -91,11 +91,13 @@ resquest();
 		top:50px;
 		left:0;
 		width: 100%;
+		height:40px;
 		font-size: 20px;
 		padding: 3px;
 		background-color:yellow;
 		display: flex;
 		justify-content: center;
+		align-items: center;
 	}
 	.layout{
 		margin-top: 50px;

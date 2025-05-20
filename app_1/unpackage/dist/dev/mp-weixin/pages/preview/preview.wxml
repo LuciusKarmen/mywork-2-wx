@@ -1,1 +1,1 @@
-<view></view>
+<view class="show data-v-2dad6c07"><swiper class="data-v-2dad6c07" circular><swiper-item wx:for="{{a}}" wx:for-item="item" class="data-v-2dad6c07"><image class="data-v-2dad6c07" src="{{b}}" mode="aspectFill"></image></swiper-item></swiper><view class="mask data-v-2dad6c07"><view class="back data-v-2dad6c07"></view><view class="count data-v-2dad6c07"></view><view class="time data-v-2dad6c07"></view><view class="day data-v-2dad6c07"></view><view class="table data-v-2dad6c07"></view></view></view>

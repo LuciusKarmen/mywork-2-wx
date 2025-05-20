@@ -11,7 +11,8 @@
 		</view>
 		<view class='session'>
 			<view class='list'>
-				<view class="row">
+				
+				<view class="row" @click="go">
 					<view class='left'>
 						<uni-icons type="download" size='30' color="green"></uni-icons>
 						<view class='text'>我的下载</view>
@@ -21,10 +22,11 @@
 						<uni-icons type="forward" size='30' color="green"></uni-icons>
 					</view>
 				</view>
+				
 				<view class="row">
 					<view class='left'>
 						<uni-icons type="download" size='30' color="green"></uni-icons>
-						<view class='text'>联系客服</view>
+						<view class='text'>我的评分</view>
 					</view>
 					<view class='right'>
 						<view class='text'>33</view>
@@ -32,13 +34,20 @@
 					</view>
 					
 				</view>
+
 				<view class="row">
 					<view class='left'>
 						<uni-icons type="download" size='30' color="green"></uni-icons>
-						<view class='text'>33</view>
+						<view class='text'>联系客服</view>
+						<!-- #ifdef MP -->
+						<button open-type="contact"></button>
+						<!-- #endif -->
+						<!-- #ifndef MP -->
+						<button @click="clicki">电话</button>
+						<!-- #endif -->
+						
 					</view>
 					<view class='right'>
-						<view class='text'>33</view>
 						<uni-icons type="forward" size='30' color="green"></uni-icons>
 					</view>
 					
@@ -51,20 +60,20 @@
 					<view class="row">
 						<view class='left'>
 							<uni-icons type="download" size='30' color="green"></uni-icons>
-							<view class='text'>33</view>
+							<view class='text'>常见问题</view>
 						</view>
 						<view class='right'>
-							<view class='text'>33</view>
+							
 							<uni-icons type="forward" size='30' color="green"></uni-icons>
 						</view>
 					</view>
 					<view class="row">
 						<view class='left'>
 							<uni-icons type="download" size='30' color="green"></uni-icons>
-							<view class='text'>33</view>
+							<view class='text'>关于我们</view>
 						</view>
 						<view class='right'>
-							<view class='text'>33</view>
+							
 							<uni-icons type="forward" size='30' color="green"></uni-icons>
 						</view>
 					</view>
@@ -76,7 +85,16 @@
 </template>
 
 <script setup>
-	
+const clicki=()=>{
+	uni.makePhoneCall({
+		phoneNumber:'16670870515'
+	})
+}
+const go=()=>{
+	uni.switchTab({
+		url:'/pages/class/class'
+	})
+}
 </script>
 
 <style lang="scss" sc1>
@@ -135,6 +153,15 @@
 			.right{
 				display: flex;
 				align-items: center;
+			}
+			button{
+
+				position: absolute;
+				top:390px;
+				left:17px;
+				width:93%;
+				height: 55px;
+				opacity: 0;
 			}
 		}
 	}

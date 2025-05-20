@@ -13,7 +13,7 @@
 			"style" : 
 			{
 				"navigationBarTitleText" : "我的",
-				"navigationBarBackgroundColor": "#ff00ff"
+				"navigationBarBackgroundColor":"#07feee"
 			}
 		},
 		{
@@ -30,7 +30,7 @@
 			"path" : "pages/class/class",
 			"style" : 
 			{
-				"navigationBarTitleText" : "class",
+				"navigationBarTitleText" : "精选分类",
 				"navigationBarBackgroundColor": "#ffaa00"
 			}
 		},
@@ -38,14 +38,25 @@
 			"path" : "pages/preview/preview",
 			"style" : 
 			{
-				"navigationBarTitleText" : "预览"
+				"navigationBarTitleText" : "预览",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView":false
+				}
 			}
 		},
 		{
 			"path" : "pages/classlist/classlist",
 			"style" : 
 			{
-				"navigationBarTitleText" : ""
+				"navigationBarTitleText" : "更多壁纸"
+			}
+		},
+		{
+			"path" : "pages/our/our",
+			"style" : 
+			{
+				"navigationBarTitleText" : "关于我"
 			}
 		}
 		

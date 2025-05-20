@@ -1,11 +1,11 @@
 <template>
 	<view class="theme">
-		<navigator url="/pages/my/my" class='box' v-if='!isMore'>
+		<navigator url="/pages/classlist/classlist" class='box' v-if='!isMore'>
 			<img src="../../static/preview_small.webp" alt="" mode="aspectFill" class='pic'>
 			<view class="mask"> hhh</view>
 			<view class='token'>666</view>
 		</navigator>
-		<navigator url="/pages/class/class" class='box a' v-if='isMore'>
+		<navigator url="/pages/class/class" open-type="reLaunch" class='box a' v-if='isMore'>
 			<img src="../../static/preview_small.webp" alt="" mode="aspectFill" class='pic'>
 			<view class="mask">更多</view>
 			

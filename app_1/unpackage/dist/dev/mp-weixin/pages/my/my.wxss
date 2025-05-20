@@ -75,3 +75,11 @@
   display: flex;
   align-items: center;
 }
+.uesrLayout .session .row button {
+  position: absolute;
+  top: 390px;
+  left: 17px;
+  width: 93%;
+  height: 55px;
+  opacity: 0;
+}
