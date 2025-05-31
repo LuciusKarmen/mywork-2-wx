@@ -70,7 +70,7 @@
 					<view class="row">
 						<view class='left'>
 							<uni-icons type="download" size='30' color="green"></uni-icons>
-							<view class='text'>关于我们</view>
+							<view class='text' @click="goto">关于我们</view>
 						</view>
 						<view class='right'>
 							
@@ -93,6 +93,11 @@ const clicki=()=>{
 const go=()=>{
 	uni.switchTab({
 		url:'/pages/class/class'
+	})
+}
+const goto=()=>{
+	uni.navigateTo({
+		url:'/pages/our/our'
 	})
 }
 </script>

@@ -17,6 +17,11 @@ const _sfc_main = {
         url: "/pages/class/class"
       });
     };
+    const goto = () => {
+      common_vendor.index.navigateTo({
+        url: "/pages/our/our"
+      });
+    };
     return (_ctx, _cache) => {
       return {
         a: common_assets._imports_0$2,
@@ -66,7 +71,8 @@ const _sfc_main = {
           size: "30",
           color: "green"
         }),
-        l: common_vendor.p({
+        l: common_vendor.o(goto),
+        m: common_vendor.p({
           type: "forward",
           size: "30",
           color: "green"
