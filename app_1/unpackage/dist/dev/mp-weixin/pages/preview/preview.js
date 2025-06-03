@@ -48,7 +48,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
         a: common_vendor.f(10, (item, k0, i0) => {
           return {};
         }),
-        b: common_assets._imports_0$3,
+        b: common_assets._imports_0$1,
         c: common_vendor.o(change),
         d: kkk.value
       }, kkk.value ? {

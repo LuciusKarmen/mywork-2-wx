@@ -1,26 +1,55 @@
 <template>
 	<view class="theme">
 		<navigator url="/pages/classlist/classlist" class='box' v-if='!isMore'>
-			<img src="../../static/preview_small.webp" alt="" mode="aspectFill" class='pic'>
-			<view class="mask"> hhh</view>
-			<view class='token'>666</view>
+			<img :src="item.picurl" alt="" mode="aspectFill" class='pic'>
+			<view class="mask">{{item.name}}</view>
+			<view class='token'>{{compareTimestamp(item.updateTime)}}</view>
+			
 		</navigator>
 		<navigator url="/pages/class/class" open-type="reLaunch" class='box a' v-if='isMore'>
 			<img src="../../static/preview_small.webp" alt="" mode="aspectFill" class='pic'>
 			<view class="mask">更多</view>
-			
 		</navigator>
 	</view>
 </template>
 
 <script lang="ts" setup>
+import { ref, onMounted } from 'vue'
+
 defineProps({
-	isMore:{
-		type:Boolean,
-		default:false
-	}
+  isMore: {
+    type: Boolean,
+    default: false
+  },
+  item: {
+    type: Object,
+    default() {
+      return {
+        name: "名字",
+        picurl: "",
+        updateTime: "" 
+      }
+    }
+  }
 })
-	
+function compareTimestamp(timestamp) {
+  const currentTime = new Date().getTime();
+  const timeDiff = currentTime - timestamp;
+
+  if (timeDiff < 60000) {  
+    return '1分钟内';
+  } else if (timeDiff < 3600000) {
+    return Math.floor(timeDiff / 60000) + '分钟前更新';
+  } else if (timeDiff < 86400000) {
+    return Math.floor(timeDiff / 3600000) + '小时前更新';
+  } else if (timeDiff < 2592000000) {
+    return Math.floor(timeDiff / 86400000) + '天前更新';
+  } else if (timeDiff < 7776000000) {
+    return Math.floor(timeDiff / 2592000000) + '月前更新';
+  } else {
+    return '很久前更新';
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -58,7 +87,7 @@ defineProps({
 			
 		}
 		.token{
-			width:60%;
+			width:57%;
 			font-size: 22rpx;
 			position: absolute;
 			left: 0;

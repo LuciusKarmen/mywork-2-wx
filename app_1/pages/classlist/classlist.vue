@@ -1,36 +1,30 @@
 <template>
 	<view class="content">
 		<view class="main">
-			<navigator url="" v-for='item in 15' class='pic'>
-				<image src='/static/preview1.jpg' mode='aspectFill'></image>
-			</navigator>
+			<theme-item :item='item' v-for="item in classifyList" :key='item._id'>
+			</theme-item>
 		</view>
 	</view>
 </template>
 
 <script setup lang='ts'>
+	import {onMounted, ref} from 'vue'
+	import {apisetClassify} from '@/api/apis.js'
+	
+const classifyList=ref([])
+const getClass=async()=>{
+	let res=await apisetClassify();
+	classifyList.value=res.data;
+	console.log("#"+classifyList.value)
+}
+
+	getClass()
 
 </script>
 
 <style scoped lang='scss'>
 .content{
 	padding:2px;
-	
-	.main{
-		width: 100%;
-		display:grid;
-		grid-template-columns: repeat(3,1fr);
-		gap:4rpx;
-		.pic{
-			height:440rpx;
-			image{
-				width: 100%;
-				height: 100%;
-				
-			}
-		}
-		
-	}
 	
 }
 </style>

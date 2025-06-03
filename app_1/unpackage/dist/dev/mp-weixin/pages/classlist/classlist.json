@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "更多壁纸",
-  "usingComponents": {}
+  "usingComponents": {
+    "theme-item": "../../components/theme-item/theme-item"
+  }
 }

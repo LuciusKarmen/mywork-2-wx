@@ -1,16 +1,10 @@
 <template>
 		<view class='home pageB'>
-			<title></title>
+			<title>hh</title>
 			<view class="banner">
 				<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" circular="true">
-					<swiper-item>
-						<view class="swiper-item"><img src="../../static/banner1.jpg" alt="1" class="img"></view>
-					</swiper-item>
-					<swiper-item>
-						<view class="swiper-item"><img src="../../static/banner2.jpg" alt="2" class="img"></view>
-					</swiper-item>
-					<swiper-item>
-						<view class="swiper-item"><img src="../../static/banner3.jpg" alt="3" class="img"></view>
+					<swiper-item v-for='item in bannerList' :key="item._id">
+						<view class="swiper-item"><img :src="item.picurl" alt="图片" class="img" mode='aspectFill'></view>
 					</swiper-item>
 				</swiper>
 			</view>
@@ -44,8 +38,8 @@
 				</common-title>
 				<view class="aaa">
 					<scroll-view scroll-x='true'>
-						<view class='box' v-for='item in 8'>
-							<img src="../../static/preview_small.webp" alt="111" mode="aspectFill" class='pic'>
+						<view class='box' v-for='item in randomList'>
+							<img :src="item.smallPicurl" alt="111" mode="aspectFill" class='pic'>
 						</view>
 					</scroll-view>
 				</view>
@@ -60,7 +54,7 @@
 					</template>
 				</common-title>
 				<view class="bbb">
-					<theme-item class='box' v-for='item in 8'></theme-item>
+					<theme-item class='box' v-for='item in classifyList' :key='item._id' :item="item"></theme-item>
 					<theme-item :isMore='true'></theme-item>
 				</view>
 			</view>
@@ -69,8 +63,29 @@
 </template>
 
 <script lang="ts" setup>
-
-</script>
+import {ref} from 'vue'
+import {apiset,apisetRandom, apisetClassify} from  "@/api/apis.js"
+	const bannerList=ref([])
+	const randomList=ref([])
+	const classifyList=ref([])
+	const getBanner=async()=>{
+        let res=await apiset();
+		bannerList.value=res.data;
+		console.log("@开头轮播："+bannerList.value)
+	}
+	const getRandom=async()=>{
+        let res=await apisetRandom();
+		randomList.value=res.data;
+		console.log("@随机："+res.data)
+	}	
+	const getClassify=async()=>{
+		let res=await apisetClassify();
+		classifyList.value=res.data.slice(0,8);
+	}
+	getBanner();
+	getRandom();
+	getClassify();
+</script >
 
 <style lang="scss" scoped>
 	.home{
