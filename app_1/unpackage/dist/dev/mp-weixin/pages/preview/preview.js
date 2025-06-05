@@ -60,8 +60,13 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
     const clickdown = () => {
       common_vendor.index.getImageInfo({
         src: classInfo.value.picurl,
-        success: () => {
-          common_vendor.index.__f__("log", "at pages/preview/preview.vue:153", "下载成功");
+        success: (res) => {
+          common_vendor.index.saveImageToPhotosAlbum({
+            filePath: res.path,
+            success: () => {
+              common_vendor.index.__f__("log", "at pages/preview/preview.vue:156", "下载成功");
+            }
+          });
         }
       });
     };
@@ -69,18 +74,19 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
     const classindex = common_vendor.ref();
     const classInfo = common_vendor.ref();
     common_vendor.onLoad((e) => {
-      common_vendor.index.__f__("log", "at pages/preview/preview.vue:170", e);
+      common_vendor.index.__f__("log", "at pages/preview/preview.vue:171", e);
       classid.value = e.id;
       let index = classList.value.findIndex((item) => item._id == classid.value);
-      common_vendor.index.__f__("log", "at pages/preview/preview.vue:173", index);
+      common_vendor.index.__f__("log", "at pages/preview/preview.vue:174", index);
       classindex.value = index;
       classInfo.value = classList.value[classindex.value];
-      common_vendor.index.__f__("log", "at pages/preview/preview.vue:176", classInfo.value);
+      common_vendor.index.__f__("log", "at pages/preview/preview.vue:177", classInfo.value);
       readImgsFun();
     });
     const hhh = (e) => {
       classindex.value = e.detail.current;
-      common_vendor.index.__f__("log", "at pages/preview/preview.vue:181", e);
+      classInfo.value = classList.value[classindex.value];
+      common_vendor.index.__f__("log", "at pages/preview/preview.vue:183", e);
     };
     function readImgsFun() {
       readImgs.value.push(

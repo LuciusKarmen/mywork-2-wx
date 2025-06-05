@@ -58,6 +58,20 @@
 			{
 				"navigationBarTitleText" : "关于我"
 			}
+		},
+		{
+			"path" : "pages/problem/problem",
+			"style" : 
+			{
+				"navigationBarTitleText" : "常见问题"
+			}
+		},
+		{
+			"path" : "pages/search/search",
+			"style" : 
+			{
+				"navigationBarTitleText" : "搜索一下"
+			}
 		}
 		
 	],

@@ -49,7 +49,7 @@
 					<view class="row">
 						<view class='left'>
 							<uni-icons type="download" size='30' color="green"></uni-icons>
-							<view class='text'>常见问题</view>
+							<view class='text' @click="goq">常见问题</view>
 						</view>
 						<view class='right'>
 							
@@ -94,6 +94,11 @@ const go=()=>{
 const goto=()=>{
 	uni.navigateTo({
 		url:'/pages/our/our'
+	})
+}
+const goq=()=>{
+	uni.navigateTo({
+		url:'/pages/problem/problem'
 	})
 }
 getuser()

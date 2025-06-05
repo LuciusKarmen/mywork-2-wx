@@ -4,6 +4,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
   __name: "cat",
   setup(__props) {
     const pets = common_vendor.ref([]);
+    common_vendor.ref([]);
     function resquest() {
       common_vendor.index.request({
         url: "https://api.thecatapi.com/v1/images/search?limit=10"
@@ -48,8 +49,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
           return {
             a: item.url,
             b: common_vendor.o(($event) => showa(index), item.id),
-            c: common_vendor.t(item.content),
-            d: item.id
+            c: item.id
           };
         }),
         b: common_vendor.o(($event) => fresh()),

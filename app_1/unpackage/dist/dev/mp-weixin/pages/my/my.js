@@ -29,6 +29,11 @@ const _sfc_main = {
         url: "/pages/our/our"
       });
     };
+    const goq = () => {
+      common_vendor.index.navigateTo({
+        url: "/pages/problem/problem"
+      });
+    };
     getuser();
     return (_ctx, _cache) => {
       return {
@@ -60,18 +65,19 @@ const _sfc_main = {
           size: "30",
           color: "green"
         }),
-        i: common_vendor.p({
+        i: common_vendor.o(goq),
+        j: common_vendor.p({
           type: "forward",
           size: "30",
           color: "green"
         }),
-        j: common_vendor.p({
+        k: common_vendor.p({
           type: "download",
           size: "30",
           color: "green"
         }),
-        k: common_vendor.o(goto),
-        l: common_vendor.p({
+        l: common_vendor.o(goto),
+        m: common_vendor.p({
           type: "forward",
           size: "30",
           color: "green"

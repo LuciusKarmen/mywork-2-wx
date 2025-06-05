@@ -8,8 +8,6 @@
 			<view class='pic'>
 				<img :src="item.url" alt="hhh" mode='widthFix' @click="showa(index)" lazy-load>
 			</view>
-				<view class='text'>{{item.content}}</view>
-				<view class='text'>---光明同学</view>
 			</view>
 		</view>
 		<view class="xxx">
@@ -22,12 +20,13 @@
 <script lang="ts" setup>
 import {ref} from 'vue';
 import {onReachBottom,onPullDownRefresh} from "@dcloudio/uni-app"
-const pets=ref([]);
+const pets=ref([]);const save=ref([]);
 
 function resquest(){
 	uni.request({
 		url:'https://api.thecatapi.com/v1/images/search?limit=10'
 	}).then(res=>{
+		
 		pets.value=res.data
 	}).catch(err=>{
 		uni.showToast({
@@ -102,6 +101,8 @@ resquest();
 	.layout{
 		margin-top: 50px;
 		padding: 30rpx; 
+		display:grid;
+		grid-template-columns: repeat(1,1fr);
 		.box{
 			margin-bottom:60rpx;
 			box-shadow:0 10rpx 30rpx rgba(0,0,0,0.08);
@@ -110,6 +111,7 @@ resquest();
 			.pic{
 				image{
 					width:100%;
+					height: 100%;
 					border-radius: 15px;
 				}
 			}
