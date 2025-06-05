@@ -15,7 +15,7 @@
 <style lang="scss">
     .title{
 		display:flex;
-		height:50px;
+		height:51px;
 		padding:0 16px;
 		align-items: center;
 		.text{
