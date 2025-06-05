@@ -43,11 +43,12 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
       }, !__props.isMore ? {
         b: __props.item.picurl,
         c: common_vendor.t(__props.item.name),
-        d: common_vendor.t(compareTimestamp(__props.item.updateTime))
+        d: common_vendor.t(compareTimestamp(__props.item.updateTime)),
+        e: "/pages/classlist/classlist?id=" + __props.item._id + "&name=" + __props.item.name
       } : {}, {
-        e: __props.isMore
+        f: __props.isMore
       }, __props.isMore ? {
-        f: common_assets._imports_0$2
+        g: common_assets._imports_0$1
       } : {});
     };
   }

@@ -6,8 +6,8 @@ function request(config = {}) {
   return new Promise((resolve, reject) => {
     common_vendor.index.request({
       url,
-      data,
       header,
+      data,
       success: (res) => {
         if (res.data.errCode === 0) {
           resolve(res.data);

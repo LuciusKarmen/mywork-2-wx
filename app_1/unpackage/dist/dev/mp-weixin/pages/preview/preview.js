@@ -1,6 +1,5 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
-const common_assets = require("../../common/assets.js");
 if (!Array) {
   const _easycom_uni_dateformat2 = common_vendor.resolveComponent("uni-dateformat");
   const _easycom_uni_icons2 = common_vendor.resolveComponent("uni-icons");
@@ -18,9 +17,21 @@ if (!Math) {
 const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
   __name: "preview",
   setup(__props) {
+    const storgclassList = common_vendor.index.getStorageSync("storgclassList");
+    common_vendor.index.__f__("log", "at pages/preview/preview.vue:101", storgclassList);
+    const classList = common_vendor.ref([]);
+    const readImgs = common_vendor.ref([]);
+    classList.value = storgclassList.map((item) => {
+      return {
+        ...item,
+        picurl: item.smallPicurl.replace("_small.webp", ".jpg")
+      };
+    });
+    common_vendor.index.__f__("log", "at pages/preview/preview.vue:110", classList.value);
     const kkk = common_vendor.ref(true);
     const info = common_vendor.ref(null);
     const p = common_vendor.ref(null);
+    const userscore = common_vendor.ref(5);
     const change = () => {
       kkk.value = !kkk.value;
     };
@@ -39,61 +50,118 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
         p.value.close();
       }
     };
-    const submitRate = (score = 0) => {
-      common_vendor.index.__f__("log", "at pages/preview/preview.vue:117", "评分:", score);
+    const closea = () => {
+      info.value.close();
+    };
+    const sub = (userscore2 = 0) => {
+      common_vendor.index.__f__("log", "at pages/preview/preview.vue:139", "评分:", userscore2);
       closePopup();
     };
+    const clickdown = () => {
+      common_vendor.index.getImageInfo({
+        src: classInfo.value.picurl,
+        success: () => {
+          common_vendor.index.__f__("log", "at pages/preview/preview.vue:153", "下载成功");
+        }
+      });
+    };
+    const classid = common_vendor.ref([]);
+    const classindex = common_vendor.ref();
+    const classInfo = common_vendor.ref();
+    common_vendor.onLoad((e) => {
+      common_vendor.index.__f__("log", "at pages/preview/preview.vue:170", e);
+      classid.value = e.id;
+      let index = classList.value.findIndex((item) => item._id == classid.value);
+      common_vendor.index.__f__("log", "at pages/preview/preview.vue:173", index);
+      classindex.value = index;
+      classInfo.value = classList.value[classindex.value];
+      common_vendor.index.__f__("log", "at pages/preview/preview.vue:176", classInfo.value);
+      readImgsFun();
+    });
+    const hhh = (e) => {
+      classindex.value = e.detail.current;
+      common_vendor.index.__f__("log", "at pages/preview/preview.vue:181", e);
+    };
+    function readImgsFun() {
+      readImgs.value.push(
+        classInfo.value <= 0 ? classList.value.length - 1 : classInfo.value - 1,
+        classInfo.value,
+        classInfo.value >= classList.value.length - 1 ? 0 : classInfo.value + 1
+      );
+      readImgs.value = [...new Set(readImgs.value)];
+    }
     return (_ctx, _cache) => {
       return common_vendor.e({
-        a: common_vendor.f(10, (item, k0, i0) => {
-          return {};
+        a: common_vendor.f(classList.value, (item, k0, i0) => {
+          return {
+            a: item.picurl
+          };
         }),
-        b: common_assets._imports_0$1,
-        c: common_vendor.o(change),
-        d: kkk.value
+        b: common_vendor.o(change),
+        c: classindex.value,
+        d: common_vendor.o(hhh),
+        e: kkk.value
       }, kkk.value ? {
-        e: common_vendor.p({
+        f: common_vendor.t(classindex.value + 1),
+        g: common_vendor.t(classList.value.length),
+        h: common_vendor.p({
           date: /* @__PURE__ */ new Date(),
           format: "hh:mm"
         }),
-        f: common_vendor.p({
+        i: common_vendor.p({
           date: /* @__PURE__ */ new Date(),
           format: "MM月dd日"
         }),
-        g: common_vendor.p({
+        j: common_vendor.p({
           type: "info",
           size: "35"
         }),
-        h: common_vendor.o(clickInfo),
-        i: common_vendor.p({
+        k: common_vendor.o(clickInfo),
+        l: common_vendor.p({
           type: "heart",
           size: "35"
         }),
-        j: common_vendor.o(clickp),
-        k: common_vendor.p({
+        m: common_vendor.o(clickp),
+        n: common_vendor.p({
           type: "download",
           size: "35"
-        })
+        }),
+        o: common_vendor.o(clickdown)
       } : {}, {
-        l: common_vendor.p({
+        p: common_vendor.p({
           type: "close",
           size: "30"
         }),
-        m: common_vendor.sr(info, "2dad6c07-5", {
+        q: common_vendor.o(closea),
+        r: common_vendor.t(classInfo.value.classid),
+        s: common_vendor.t(classInfo.value.nickname),
+        t: common_vendor.t(classInfo.value.score),
+        v: common_vendor.t(classInfo.value.description),
+        w: common_vendor.f(classInfo.value.tabs, (tab, k0, i0) => {
+          return {
+            a: common_vendor.t(tab)
+          };
+        }),
+        x: common_vendor.sr(info, "2dad6c07-5", {
           "k": "info"
         }),
-        n: common_vendor.p({
+        y: common_vendor.p({
           type: "bottom"
         }),
-        o: common_vendor.p({
+        z: common_vendor.p({
           type: "close",
           size: "30"
         }),
-        p: common_vendor.o(closePopup),
-        q: common_vendor.o(() => submitRate(5)),
-        r: common_vendor.o(() => submitRate(4)),
-        s: common_vendor.o(submitRate),
-        t: common_vendor.sr(p, "2dad6c07-7", {
+        A: common_vendor.o(closePopup),
+        B: common_vendor.o(() => {
+        }),
+        C: common_vendor.o(($event) => userscore.value = $event),
+        D: common_vendor.p({
+          modelValue: userscore.value
+        }),
+        E: common_vendor.t(userscore.value),
+        F: common_vendor.o(sub),
+        G: common_vendor.sr(p, "2dad6c07-7", {
           "k": "p"
         })
       });

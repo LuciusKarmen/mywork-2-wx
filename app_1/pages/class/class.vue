@@ -1,32 +1,37 @@
 <template>
-	<view class="classout pageB">
-		<title></title>
-		<view class="main">
-			<theme-item :item='item' v-for="item in classifyList" :key='item._id'>
-			</theme-item>
+	<view class="classLayout pageBg">
+		<!-- #ifndef MP-TOUTIAO -->
+		<custom-nav-bar title="分类"></custom-nav-bar>
+		<!-- #endif -->
+		
+		<view class="classify">
+			<theme-item v-for="item in classifyLi" 
+			:key="item._id"
+			:item="item"
+			></theme-item>
 		</view>
+		
 	</view>
 </template>
 
-<script setup lang='ts'>
-	import {onMounted, ref} from 'vue'
-	import {apisetClassify} from '@/api/apis.js'
-	
-const classifyList=ref([])
-const getClass=async()=>{
-	let res=await apisetClassify({
-		pageSize:18;
+<script setup lang="ts">
+import { ref } from 'vue';
+import {onShareAppMessage,onShareTimeline} from "@dcloudio/uni-app"
+import {apisetClassify} from "@/api/apis.js"
+const classifyLi = ref([]);
+
+const getClassify =async()=>{
+	let res =await apisetClassify({
+		pageSize:20
 	});
-	classifyList.value=res.data;
-	console.log("#"+classifyList.value)
+	classifyLi.value = res.data
+	console.log(res);
 }
-
-	getClass()
-
+getClassify()
 </script>
 
-<style>
-	.main{
+<style scoped lang="scss">
+	.classify{
 		display: grid;
 		grid-template-columns: repeat(3,1fr);
 		padding:30rpx;

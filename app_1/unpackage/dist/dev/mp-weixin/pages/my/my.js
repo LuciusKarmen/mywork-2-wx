@@ -1,6 +1,7 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
 const common_assets = require("../../common/assets.js");
+const api_apis = require("../../api/apis.js");
 if (!Array) {
   const _easycom_uni_icons2 = common_vendor.resolveComponent("uni-icons");
   _easycom_uni_icons2();
@@ -12,9 +13,15 @@ if (!Math) {
 const _sfc_main = {
   __name: "my",
   setup(__props) {
+    const userList = common_vendor.ref([]);
+    const getuser = async () => {
+      const res = await api_apis.apisetUser();
+      userList.value = res.data;
+      common_vendor.index.__f__("log", "at pages/my/my.vue:82", userList.value);
+    };
     const go = () => {
       common_vendor.index.switchTab({
-        url: "/pages/class/class"
+        url: "/pages/classlist/classlist"
       });
     };
     const goto = () => {
@@ -22,6 +29,7 @@ const _sfc_main = {
         url: "/pages/our/our"
       });
     };
+    getuser();
     return (_ctx, _cache) => {
       return {
         a: common_assets._imports_0,
@@ -30,49 +38,40 @@ const _sfc_main = {
           size: "30",
           color: "green"
         }),
-        c: common_vendor.p({
+        c: common_vendor.t(common_vendor.unref(userList).downloadSize),
+        d: common_vendor.p({
           type: "forward",
           size: "30",
           color: "green"
         }),
-        d: common_vendor.o(go),
-        e: common_vendor.p({
-          type: "download",
-          size: "30",
-          color: "green"
-        }),
+        e: common_vendor.o(go),
         f: common_vendor.p({
-          type: "forward",
+          type: "download",
           size: "30",
           color: "green"
         }),
         g: common_vendor.p({
-          type: "download",
+          type: "forward",
           size: "30",
           color: "green"
         }),
         h: common_vendor.p({
-          type: "forward",
+          type: "download",
           size: "30",
           color: "green"
         }),
         i: common_vendor.p({
-          type: "download",
-          size: "30",
-          color: "green"
-        }),
-        j: common_vendor.p({
           type: "forward",
           size: "30",
           color: "green"
         }),
-        k: common_vendor.p({
+        j: common_vendor.p({
           type: "download",
           size: "30",
           color: "green"
         }),
-        l: common_vendor.o(goto),
-        m: common_vendor.p({
+        k: common_vendor.o(goto),
+        l: common_vendor.p({
           type: "forward",
           size: "30",
           color: "green"

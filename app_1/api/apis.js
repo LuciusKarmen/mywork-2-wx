@@ -10,8 +10,11 @@ export function apisetDate(data={}){
 	return request({url:"https://tea.qingnian.com/api/bizhi/wallNewList",data})
 }
 export function apisetClassify(data={}){
-	return request({url:"https://tea.qingnian8.com/api/bizhi/classify"})
+	return request({url:"https://tea.qingnian8.com/api/bizhi/classify",data})
 }
-export function apisetClass(data={}){
-	return request({url:"https://tea.qingnian8.com/api/bizhi/wallList"})
+export function apisetWall(data={}){
+	return request({url:"https://tea.qingnian8.com/api/bizhi/wallList",data})
+}
+export function apisetUser(data={}){
+	return request({url:"https://tea.qingnian8.com/api/bizhi/userInfo",data})
 }

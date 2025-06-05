@@ -5,8 +5,8 @@ export function request(config={}){
     	return new Promise((resolve,reject)=>{		
     		uni.request({
     			url,
-    			data,
     			header,
+				data,
     			success:res=>{
     				if(res.data.errCode===0){
     					resolve(res.data)

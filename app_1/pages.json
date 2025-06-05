@@ -38,7 +38,7 @@
 			"path" : "pages/preview/preview",
 			"style" : 
 			{
-				"navigationBarTitleText" : "预览",
+				
 				"navigationStyle": "custom",
 				"app-plus": {
 					"titleNView":false

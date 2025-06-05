@@ -9,10 +9,15 @@
 
 	  <p class="pp">QQ:3352113389</p>
 	  <p class="pp">公众号：搜索"星辰网络运营部"</p>
+	  <br>
+	  <br>
+	  <br>
+	  <br>
+	  <div>你我皆是星辰</div>
+	  <div>历经长夜</div>
+	  <div>心向光明</div>
     </div>
-	<div class='f'>你我皆是星辰</div>
-	<div class='f'>历经长夜</div>
-	<div class='f'>心向光明</div>
+
   </div>
 </template>
 

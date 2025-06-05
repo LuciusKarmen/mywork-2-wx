@@ -18,22 +18,11 @@
 						<view class='text'>我的下载</view>
 					</view>
 					<view class='right'>
-						<view class='text'>33</view>
+						<view class='text'>{{userList.downloadSize}}</view>
 						<uni-icons type="forward" size='30' color="green"></uni-icons>
 					</view>
 				</view>
-				
-				<view class="row">
-					<view class='left'>
-						<uni-icons type="download" size='30' color="green"></uni-icons>
-						<view class='text'>我的评分</view>
-					</view>
-					<view class='right'>
-						<view class='text'>33</view>
-						<uni-icons type="forward" size='30' color="green"></uni-icons>
-					</view>
-					
-				</view>
+			
 
 				<view class="row">
 					<view class='left'>
@@ -85,6 +74,13 @@
 </template>
 
 <script setup>
+	import {apisetUser} from '../../api/apis'
+	const userList=ref([])
+	const getuser=async()=>{
+		const res=await apisetUser()
+		userList.value=res.data;
+		console.log(userList.value)
+	}
 const clicki=()=>{
 	uni.makePhoneCall({
 		phoneNumber:'16670870515'
@@ -92,7 +88,7 @@ const clicki=()=>{
 }
 const go=()=>{
 	uni.switchTab({
-		url:'/pages/class/class'
+		url:'/pages/classlist/classlist'
 	})
 }
 const goto=()=>{
@@ -100,6 +96,7 @@ const goto=()=>{
 		url:'/pages/our/our'
 	})
 }
+getuser()
 </script>
 
 <style lang="scss" sc1>

@@ -1,1 +1,1 @@
-<view class="content data-v-bd381383"><view class="main data-v-bd381383"><theme-item wx:for="{{a}}" wx:for-item="item" wx:key="a" class="data-v-bd381383" u-i="{{item.b}}" bind:__l="__l" u-p="{{item.c}}"></theme-item></view></view>
+<view class="content data-v-bd381383"><navigator wx:for="{{a}}" wx:for-item="item" wx:key="c" url="{{item.b}}" class="item data-v-bd381383"><image src="{{item.a}}" class="pic data-v-bd381383" mode="aspectFill"></image></navigator></view>

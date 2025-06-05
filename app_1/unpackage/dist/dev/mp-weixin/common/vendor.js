@@ -6993,7 +6993,7 @@ function initOnError() {
 function initRuntimeSocketService() {
   const hosts = "192.168.107.1,192.168.119.1,10.90.119.48,127.0.0.1";
   const port = "8090";
-  const id = "mp-weixin_tcBs9B";
+  const id = "mp-weixin_Johx1P";
   const lazy = typeof swan !== "undefined";
   let restoreError = lazy ? () => {
   } : initOnError();
@@ -7935,6 +7935,7 @@ const createSubpackageApp = initCreateSubpackageApp();
 const createHook = (lifecycle) => (hook, target = getCurrentInstance()) => {
   !isInSSRComponentSetup && injectHook(lifecycle, hook, target);
 };
+const onLoad = /* @__PURE__ */ createHook(ON_LOAD);
 const onReachBottom = /* @__PURE__ */ createHook(ON_REACH_BOTTOM);
 const onPullDownRefresh = /* @__PURE__ */ createHook(ON_PULL_DOWN_REFRESH);
 exports._export_sfc = _export_sfc;
@@ -7945,6 +7946,7 @@ exports.f = f;
 exports.index = index;
 exports.n = n;
 exports.o = o;
+exports.onLoad = onLoad;
 exports.onPullDownRefresh = onPullDownRefresh;
 exports.onReachBottom = onReachBottom;
 exports.p = p;
@@ -7953,4 +7955,5 @@ exports.resolveComponent = resolveComponent;
 exports.s = s;
 exports.sr = sr;
 exports.t = t;
+exports.unref = unref;
 //# sourceMappingURL=../../.sourcemap/mp-weixin/common/vendor.js.map

@@ -2,7 +2,6 @@
   "navigationBarTitleText": "精选分类",
   "navigationBarBackgroundColor": "#ffaa00",
   "usingComponents": {
-    "title": "../../components/title/title",
     "theme-item": "../../components/theme-item/theme-item"
   }
 }
