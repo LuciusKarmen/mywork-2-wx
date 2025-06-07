@@ -3,7 +3,7 @@
 		<view class='user'>
 			<view class='box'>
 				<view class="pic">
-					<img src="../../static/星辰网logo.png" class="pppp" alt="">
+					<img src="../../static/logo.png" class="pppp" alt="">
 				</view>
 				<view class='word'>Lucius-Karmen</view>
 				<view class='address'>来自：江苏</view>
@@ -18,11 +18,20 @@
 						<view class='text'>我的下载</view>
 					</view>
 					<view class='right'>
-						<view class='text'>{{userList.downloadSize}}</view>
+						<view class='text'>(维护)</view>
 						<uni-icons type="forward" size='30' color="green"></uni-icons>
 					</view>
 				</view>
-			
+				<view class="row" @click="go">
+					<view class='left'>
+						<uni-icons type="download" size='30' color="green"></uni-icons>
+						<view class='text'>我的评分</view>
+					</view>
+					<view class='right'>
+						<view class='text'>(维护)</view>
+						<uni-icons type="forward" size='30' color="green"></uni-icons>
+					</view>
+				</view>				
 
 				<view class="row">
 					<view class='left'>

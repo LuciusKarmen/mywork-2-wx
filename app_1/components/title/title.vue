@@ -1,10 +1,10 @@
 <template>
 	<view class="title">
 		<view class='text'>搜索</view>
-		<view class='li'>
+		<navigator url="/pages/search/search" class="li">
 			<uni-icons type="search" color="grey"></uni-icons>
 			<text class='t'>天上天下尽在掌中</text>
-		</view>
+		</navigator>
 	</view>
 </template>
 

@@ -103,8 +103,8 @@
 			{
 				"pagePath": "pages/cat/cat",
 				"text": "猫猫",
-				"iconPath": "/static/我的猫友1.png",
-				"selectedIconPath": "/static/我的猫友1 (1).png"
+				"iconPath": "/static/cat.png",
+				"selectedIconPath": "/static/cat1.png"
 			},
 			{
 				"pagePath": "pages/my/my",

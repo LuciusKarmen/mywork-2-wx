@@ -17,7 +17,7 @@ const _sfc_main = {
     const getuser = async () => {
       const res = await api_apis.apisetUser();
       userList.value = res.data;
-      common_vendor.index.__f__("log", "at pages/my/my.vue:82", userList.value);
+      common_vendor.index.__f__("log", "at pages/my/my.vue:91", userList.value);
     };
     const go = () => {
       common_vendor.index.switchTab({
@@ -43,41 +43,51 @@ const _sfc_main = {
           size: "30",
           color: "green"
         }),
-        c: common_vendor.t(common_vendor.unref(userList).downloadSize),
-        d: common_vendor.p({
+        c: common_vendor.p({
           type: "forward",
           size: "30",
           color: "green"
         }),
-        e: common_vendor.o(go),
-        f: common_vendor.p({
+        d: common_vendor.o(go),
+        e: common_vendor.p({
           type: "download",
           size: "30",
           color: "green"
         }),
-        g: common_vendor.p({
+        f: common_vendor.p({
           type: "forward",
           size: "30",
           color: "green"
         }),
+        g: common_vendor.o(go),
         h: common_vendor.p({
           type: "download",
           size: "30",
           color: "green"
         }),
-        i: common_vendor.o(goq),
-        j: common_vendor.p({
+        i: common_vendor.p({
           type: "forward",
           size: "30",
           color: "green"
         }),
-        k: common_vendor.p({
+        j: common_vendor.p({
           type: "download",
           size: "30",
           color: "green"
         }),
-        l: common_vendor.o(goto),
+        k: common_vendor.o(goq),
+        l: common_vendor.p({
+          type: "forward",
+          size: "30",
+          color: "green"
+        }),
         m: common_vendor.p({
+          type: "download",
+          size: "30",
+          color: "green"
+        }),
+        n: common_vendor.o(goto),
+        o: common_vendor.p({
           type: "forward",
           size: "30",
           color: "green"

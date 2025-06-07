@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/cat/cat",
+    "pages/class/class",
+    "pages/preview/preview",
+    "pages/classlist/classlist",
+    "pages/our/our",
+    "pages/problem/problem",
+    "pages/search/search"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#ffff7f",
+    "backgroundColor": "#ff0000",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#007aff",
+    "selectedColor": "#00aaff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/home-h.png",
+        "selectedIconPath": "/static/home.png"
+      },
+      {
+        "pagePath": "pages/class/class",
+        "text": "分类",
+        "iconPath": "/static/classify-h.png",
+        "selectedIconPath": "/static/classify.png"
+      },
+      {
+        "pagePath": "pages/cat/cat",
+        "text": "猫猫",
+        "iconPath": "/static/我的猫友1.png",
+        "selectedIconPath": "/static/我的猫友1 (1).png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/static/user-h.png",
+        "selectedIconPath": "/static/user.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

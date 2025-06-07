@@ -1,6 +1,6 @@
 <template>
 	<view class='kuang'>
-		hhh
+		哈哈，其实骗你的，我没有作好
 	</view>
 </template>
 
