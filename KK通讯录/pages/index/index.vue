@@ -1,8 +1,13 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
+	<view class="content pageB">
+		<image class="logo" src="/static/KK.png"></image>
 		<view class="text-area">
-			<text class="title">{{title}}</text>
+			<div class="title">{{title}}</div>
+			<br>
+			<div class="title">我会给你带来最特殊愉悦的体验</div>
+			<br>
+			<br>
+			<div class="title">请尽情享受吧！</div>
 		</view>
 	</view>
 </template>
@@ -11,7 +16,7 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				title: '欢迎来到KK通讯录'
 			}
 		},
 		onLoad() {
@@ -43,6 +48,7 @@
 	.text-area {
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
 	}
 
 	.title {

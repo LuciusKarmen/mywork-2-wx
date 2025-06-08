@@ -8,8 +8,15 @@
             "h5" : {
                 "launchtype" : "remote"
             },
+            "mp-weixin" : {
+                "launchtype" : "local"
+            },
             "provider" : "aliyun",
             "type" : "uniCloud"
+        },
+        {
+            "playground" : "standard",
+            "type" : "uni-app:app-android"
         }
     ]
 }
